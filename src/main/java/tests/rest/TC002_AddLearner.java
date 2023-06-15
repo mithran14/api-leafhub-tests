@@ -33,8 +33,8 @@ public class TC002_AddLearner extends RESTAssuredBase{
 				+ "    \"mobile\": \"9390839290\",\r\n"
 				+ "    \"phoneNumber\": \"9390839290\"\r\n"
 				+ "}";
-		
-		Response response = postWithJsonAsBody(file, "learner/add");
+		Response response = post();
+		//Response response = postWithJsonAsBody(file, "learner/add");
 		verifyContentType(response, "application/json");
 		verifyResponseCode(response, 201);
 		verifyContentWithKey(response, "message", "Learner Successfully Added");
